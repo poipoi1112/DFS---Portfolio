@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DFS — Portfolio</title>
+  <meta name="description" content="Front-end developer portfolio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span><span></span></div>
+
+  <div class="guides" aria-hidden="true">
+    <span class="guide guide--v-left"></span>
+    <span class="guide guide--v-right"></span>
+    <span class="guide guide--h-header"></span>
+    <span class="guide guide--h-second"></span>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <a class="logo" href="#top">DFS' Portfolio</a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__link is-active" href="#about">About Me</a>
+      <a class="nav__link" href="#skills">Skills</a>
+      <a class="nav__link" href="#certificates">Certificates</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <p class="hero__label"><span class="rule"></span>Portfolio<span class="rule"></span></p>
+
+      <h1 class="hero__title" aria-label="Web Developer">
+        <span class="hero__line" data-fit>WEB</span>
+        <span class="hero__line" data-fit>DEVELOPER</span>
+      </h1>
+
+      <div class="turbine" aria-hidden="true">
+        <svg class="squiggle squiggle--left" viewBox="0 0 48 14" fill="none">
+          <path d="M2 8 C 8 0, 14 0, 20 7 S 34 14, 46 5" />
+        </svg>
+        <svg class="squiggle squiggle--right" viewBox="0 0 48 14" fill="none">
+          <path d="M2 8 C 8 0, 14 0, 20 7 S 34 14, 46 5" />
+        </svg>
+
+        <svg class="turbine__svg" viewBox="0 0 200 200">
+          <circle class="turbine__ring" cx="100" cy="100" r="97" />
+          <g id="blades">
+            <path class="blade" d="M100 100 C 76 84 80 40 112 10 C 130 44 126 84 100 100 Z" />
+            <path class="blade" d="M100 100 C 76 84 80 40 112 10 C 130 44 126 84 100 100 Z" transform="rotate(120 100 100)" />
+            <path class="blade" d="M100 100 C 76 84 80 40 112 10 C 130 44 126 84 100 100 Z" transform="rotate(240 100 100)" />
+          </g>
+          <circle class="turbine__hub" cx="100" cy="100" r="17" />
+          <circle class="turbine__core" cx="100" cy="100" r="7" />
+        </svg>
+      </div>
+
+      <p class="hero__tagline">
+        It's so hot here in the Philippines. Here, have some air!
+      </p>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <span class="section__index">01 //</span>
+        <h2 class="section__title">About Me</h2>
+        <span class="rule"></span>
+      </div>
+
+      <div class="about">
+        <figure class="about__figure">
+          <div class="about__art">
+            <img src="images/ProfilePic.png" alt="Profile Photo">
+          </div>
+          <figcaption><span>FIG.01 // Profile Photo</span><span>SCALE 1:1</span></figcaption>
+        </figure>
+
+        <div class="about__text">
+          <h3 class="about__headline">
+            A coding enthusiast who loves computers, building websites, and turning creative ideas into reality.
+          </h3>
+          <p class="about__copy">
+            I design and build websites, experiment with ideas, and create cool things for the internet, one line of code at a time. I'm also familiar with Microsoft Office and Google Workspace, using tools like Excel, Word, Google Sheets, and Docs to organize information, work with data, and bring ideas to life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="section__head">
+        <span class="section__index">02 //</span>
+        <h2 class="section__title">Skills</h2>
+        <span class="rule"></span>
+      </div>
+      <ul class="skills" id="skills-list"></ul>
+      <ul class="tags" id="tools-list"></ul>
+    </section>
+
+    <!-- ===================== CERTIFICATES ===================== -->
+    <section class="section" id="certificates">
+      <div class="section__head">
+        <span class="section__index">04 //</span>
+        <h2 class="section__title">Certificates</h2>
+        <span class="rule"></span>
+      </div>
+      <ul class="certs" id="certs-list"></ul>
+
+      <!-- Certificate images. Copy a <figure> to add more -->
+      <div class="cert-gallery">
+        <figure class="cert-preview">
+          <img src="images/RWD_CERTIFICATE.png" alt="Responsive Web Design certificate">
+          <figcaption>RESPONSIVE WEB DESIGN // CERTIFICATE</figcaption>
+        </figure>
+      </div>
+
+      <div class="cert-gallery">
+        <figure class="cert-preview">
+          <img src="images/JS_CERTIFICATE.png" alt="Responsive Web Design certificate">
+          <figcaption>JavaScript // CERTIFICATE</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--contact" id="contact">
+      <div class="section__head">
+        <span class="section__index">05 //</span>
+        <h2 class="section__title">Contact</h2>
+        <span class="rule"></span>
+      </div>
+
+      <div class="contact">
+        <a class="contact__email" href="mailto:dimplessuing.10@gmail.com">dimplessuing.10@gmail.com</a>
+
+        <ul class="contact__links">
+          <li><a class="pill" href="https://github.com/poipoi1112" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a class="pill" href="https://linkedin.com/www.linkedin.com/in/dimples-suing-7824093b3" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a class="pill" href="https://x.com/https://x.com/poipoi_2004" target="_blank" rel="noopener">X / Twitter</a></li>
+        </ul>
+
+        <!-- EDIT: status line -->
+        <p class="contact__status">BASED: PHILIPPINES // WORK: REMOTE // STATUS: OPEN_FOR_WORK [TRUE]</p>
+
+        <div class="contact__face" aria-hidden="true">
+          <svg viewBox="0 0 80 80" fill="none">
+            <circle class="face" cx="40" cy="40" r="39" />
+            <ellipse class="fill" cx="31" cy="34" rx="4" ry="6" />
+            <ellipse class="fill" cx="49" cy="34" rx="4" ry="6" />
+            <path class="smile" d="M28 47 Q 40 58 52 47" />
+          </svg>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p class="footer__tag">Web design & code, creating things for the internet.</p>
+        <p class="footer__copy">©2026 DFS</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <div class="fan">
+    <label for="fan-speed">FAN SPEED / RPM</label>
+    <input type="range" id="fan-speed" min="0" max="100" value="6" />
+    <output id="fan-rpm">0000</output>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
